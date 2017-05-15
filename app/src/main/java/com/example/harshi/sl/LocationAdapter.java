@@ -66,4 +66,8 @@ public class LocationAdapter extends ArrayAdapter {
     static  class LocationHolder{
         TextView station;
     }
+    public void clear(){
+        list.clear();
+
+    }
 }
