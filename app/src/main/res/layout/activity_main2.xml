@@ -4,20 +4,97 @@
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="com.example.harshi.sl.Main2Activity">
-<android.support.v4.widget.SwipeRefreshLayout
+    <include
+        layout="@layout/tool_bar"
+        android:id="@+id/toolb"
+        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolb"
+    android:layout_marginTop="100dp"
+    android:id="@+id/relativeLayout">
+    <android.support.v4.widget.SwipeRefreshLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/swipelayout">
+    android:id="@+id/swipelayout"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+
+
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/listViewMain2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" />
-</android.support.v4.widget.SwipeRefreshLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/swipelayout" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/updateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolb"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+
+        android:text="TextView" />
+    <LinearLayout
+        android:id="@+id/category_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/primary"
+        android:weightSum="3"
+        android:layout_below="@+id/toolb"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btn_subway"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:onClick="toggleView"
+            android:background="@color/primary"
+            android:layout_height="60dp"
+            android:drawableTop="@drawable/ic_action_train"
+            android:text="Metro"
+            android:textColor="@color/icons"
+            android:textSize="12sp"
+            android:contentDescription="Tunnelbana"/>
+
+        <Button
+            android:id="@+id/btn_train"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:onClick="toggleView"
+            android:drawableTop="@drawable/ic_action_pendal"
+            android:text="Pendeltåg"
+            android:textSize="12dp"
+            android:textColor="@color/icons"
+            android:contentDescription="Pendeltåg"/>
+
+        <Button
+            android:id="@+id/btn_bus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/primary"
+            android:onClick="toggleView"
+            android:drawableTop="@drawable/ic_action_bus"
+            android:text="buss"
+            android:textSize="12dp"
+            android:textColor="@color/icons"
+            android:layout_height="60dp"
+            android:contentDescription="buss"/>
+
+    </LinearLayout>
+
+
 </RelativeLayout>

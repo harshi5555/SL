@@ -59,12 +59,15 @@ public class RouteInformationAdapter extends ArrayAdapter {
 
         RouteInformation routeInformation = (RouteInformation) this.getItem(position);
         routeInforHolder.routeInformation.setText(routeInformation.getCocatOutput());
-        routeInforHolder.routeInformation.setText(routeInformation.getCocatOutput());
-
         return row;
     }
 
     static  class RouteInforHolder{
         TextView routeInformation;
+    }
+
+    public void clear(){
+        list.clear();
+
     }
 }

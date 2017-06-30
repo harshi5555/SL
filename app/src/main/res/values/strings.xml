@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">SL</string>
+    <string name="train">Tåg</string>
+    <string name="buss">Buss</string>
+    <string name="search">Sök</string>
+    <string name="uppdate">Senast Uppdaterad :</string>
+    <string name="skriv_in_plats">Skriv in Plats</string>
+
+    <string name="internetConection">Det finns inget nätverk. Kolla din internetuppkoppling</string>
+    <string name="emptyFild">Sökfältet Är tomt..</string>
+    <string name="noStop">Hittade inga hållplatser</string>
+    <string name="history">Din senaste sök plats är</string>
+    <string name="metro">Det finns inga avgånger inom den angivna tidsramen</string>
+    <string name="bus">Det finns inga avgånger inom den angivna tidsramen</string>
+    <string name="both_bustrain">Det finns inga avgånger inom den angivna tidsramen</string>
+    <string name="try_again_later">Vänligen försök igen senare ..</string>
+    <string name="train_inga">Det finns inga avgånger inom den angivna tidsramen</string>
+
 </resources>
